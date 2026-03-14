@@ -23,11 +23,11 @@ public class PlayerLeave implements Listener {
             String reason = plugin.getConfig().getString("escapescreenshare.banreason");
             String duration = plugin.getConfig().getString("escapescreenshare.banduration");
 
-            // Execute: ban <player> <duration> <reason>
+            // Execute: command <player> <reason> <duration>
             plugin.getServer().dispatchCommand(
-                plugin.getServer().getConsoleSender(), 
+                plugin.getServer().getConsoleSender(),  
                 command + " " + player.getName() + " " + reason + " " + duration
-            );
+            );  
         }
     }
 }

@@ -2,8 +2,6 @@ name: ScreenShare
 version: '1.0'
 main: plugin.screenShare.ScreenShare
 api-version: '1.21'
-softdepend:
-  - LiteBans
 commands:
   ssunfreeze:
     description: Unfreeze player
