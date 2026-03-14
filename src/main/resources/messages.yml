@@ -1,0 +1,24 @@
+# ScreenShare Plugin Messages
+# Use '&' for color codes (&c = red, &a = green, &e = yellow etc.)
+# Use {player} as a placeholder for player names
+
+messages:
+  freeze:
+    usage: "&cUsage: /ssfreeze <player>"
+    player_not_found: "&cPlayer not found!"
+    cannot_freeze_self: "&cYou cannot freeze yourself!"
+    location_not_set: "&cFreeze location is not set in the config!"
+    success: "&aPlayer has been frozen successfully!"
+    success_target: "&cYou have been frozen by &e{player}&c!"
+    title: "&c&lFROZEN"
+    subtitle: "&7You have been frozen by a staff member"
+    message: "&cYou are frozen! Connect to our Discord for screen share."
+    already_frozen: "&cThis player is already frozen!"
+  unfreeze:
+    usage: "&cUsage: /ssunfreeze <player>"
+    player_not_found: "&cPlayer not found!"
+    cannot_unfreeze_self: "&cYou cannot unfreeze yourself!"
+    success: "&aPlayer has been unfrozen successfully!"
+    success_target: "&aYou have been unfrozen by &e{player}&a!"
+    spawn_not_set: "&cUnfreeze location is not set in the config!"
+    already_unfrozen: "&cThis player is not frozen!"

@@ -1,0 +1,18 @@
+name: ScreenShare
+version: '1.0'
+main: plugin.screenShare.ScreenShare
+api-version: '1.21'
+softdepend:
+  - LiteBans
+commands:
+  ssunfreeze:
+    description: Unfreeze player
+    aliases:
+      - kontçek
+    permission: screenshare.*
+
+  ssfreeze:
+    description: Freeze player
+    aliases:
+      - kontbırak
+    permission: screenshare.*

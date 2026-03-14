@@ -1,0 +1,45 @@
+# ScreenShare Plugin Configuration
+
+# Location where frozen players are teleported to
+freezelocation:
+  world: world
+  x: 2.5
+  y: 4.0
+  z: -1.5
+  yaw: -90.0
+  pitch: 0.0
+
+# Location where players are teleported after being unfrozen
+unfreezelocation:
+  world: world
+  x: 1.5
+  y: 4.0
+  z: -1.5
+  yaw: -90.0
+  pitch: 0.0
+
+# Freeze settings
+freeze:
+  # Commands that frozen players are allowed to use (all others are blocked)
+  # Add or remove commands as needed (include the "/" prefix)
+  allowed-commands:
+    - "/msg"
+    - "/tell"
+    - "/whisper"
+    - "/w"
+    - "/r"
+    - "/site"
+    - "/discord"
+
+# Settings for player leave while freeze (ban if quit server)
+escapescreenshare:
+  # First word to use ban command examples : "ban" - "tempban"
+  bancommand: "ban"
+  # Secondly why player banned? Examples : "hack" - "escapecontrol" (If you have litebans template you can use it here)
+  banreason: "hack"
+  # Duration of ban. (If you have litebans template leave this blank examples : "30d" - "15d" - "")
+  banduration: "30d"
+  
+# Should frozen players be allowed to move?
+# If false, movement will be cancelled.
+allow-to-move: false
