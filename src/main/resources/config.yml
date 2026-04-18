@@ -22,6 +22,8 @@ unfreezelocation:
 freeze:
   # Commands that frozen players are allowed to use (all others are blocked)
   # Add or remove commands as needed (include the "/" prefix)
+
+
   allowed-commands:
     - "/msg"
     - "/tell"
@@ -43,3 +45,6 @@ escapescreenshare:
 # Should frozen players be allowed to move?
 # If false, movement will be cancelled.
 allow-to-move: false
+
+# Should the player be teleported back after being unfrozen?
+tp-back-after-unfreeze: true

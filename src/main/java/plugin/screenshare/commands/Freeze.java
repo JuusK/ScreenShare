@@ -64,14 +64,14 @@ public class Freeze implements CommandExecutor {
             return true;
         }
 
-        if (!ScreenShare.frozenPlayers.contains(target.getUniqueId())){ // If target is not in frozen list
+        if (!(ScreenShare.frozenPlayers.containsKey(target.getUniqueId()))){ // If target is not in frozen list
             if (location == null) {
                 p.sendMessage(Message.get("messages.freeze.location_not_set")); // Send error message if location not set
                 return true;
             }
 
             //Add target to frozen players list
-            ScreenShare.frozenPlayers.add(target.getUniqueId());
+            ScreenShare.frozenPlayers.put(target.getUniqueId(), target.getLocation());
             p.sendMessage(Message.get("messages.freeze.success"));
 
             // Send messages and tp player to location

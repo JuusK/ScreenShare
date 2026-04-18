@@ -35,8 +35,9 @@ public class UnFreeze implements CommandExecutor {
             }
         }
 
+
         if (!(sender instanceof Player)){
-            System.out.println("ScreenShare Only players can execute this command!");
+            System.out.println("Only players can execute this command!");
             return true;
         }
 
@@ -60,7 +61,11 @@ public class UnFreeze implements CommandExecutor {
             return true;
         }
 
-        if (ScreenShare.frozenPlayers.contains(target.getUniqueId())){ // If target is in frozen list
+        if (ScreenShare.frozenPlayers.containsKey(target.getUniqueId())){
+            if (plugin.getConfig().contains("tp-back-after-unfreeze")) {
+                if(plugin.getConfig().getBoolean("tp-back-after-unfreeze")) location = ScreenShare.frozenPlayers.get(target.getUniqueId());
+            }
+            // If target is in frozen list
             ScreenShare.frozenPlayers.remove(target.getUniqueId());
             p.sendMessage(Message.get("messages.unfreeze.success"));
             target.sendMessage(Message.get("messages.unfreeze.success_target", "{player}", p.getName()));

@@ -1,5 +1,6 @@
 package plugin.screenshare;
 
+import org.bukkit.Location;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import plugin.Message;
@@ -8,13 +9,12 @@ import plugin.screenshare.commands.UnFreeze;
 import plugin.screenshare.listeners.PlayerCommand;
 import plugin.screenshare.listeners.PlayerLeave;
 import plugin.screenshare.listeners.PlayerMove;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.UUID;
+
+import java.util.*;
 
 public final class ScreenShare extends JavaPlugin {
 
-    public static Set<UUID> frozenPlayers = new HashSet<>();
+    public static Map<UUID, Location> frozenPlayers = new HashMap<>();
 
     @Override
     public void onEnable() {

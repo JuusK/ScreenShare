@@ -7,10 +7,20 @@ commands:
     description: Unfreeze player
     aliases:
       - unfreeze
-    permission: screenshare.*
+    permission: screenshare.unfreeze
 
   ssfreeze:
     description: Freeze player
     aliases:
       - freeze
-    permission: screenshare.*
+    permission: screenshare.freeze
+
+
+permissions:
+  screenshare.freeze:
+    description: Allow people to freeze others
+    default: op
+
+  screenshare.unfreeze:
+    description: Allow people to unfreeze others
+    default: op
