@@ -14,7 +14,7 @@ public class PlayerMove implements Listener {
 
     @EventHandler
     public void onPlayerMove(PlayerMoveEvent e){
-        if (ScreenShare.frozenPlayers.contains(e.getPlayer().getUniqueId())){
+        if (ScreenShare.frozenPlayers.containsKey(e.getPlayer().getUniqueId())){
             boolean allowMove = plugin.getConfig().getBoolean("allow-to-move");
             if (!allowMove) {
                 e.setCancelled(true);

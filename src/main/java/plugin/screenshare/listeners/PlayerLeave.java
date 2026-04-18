@@ -16,7 +16,7 @@ public class PlayerLeave implements Listener {
     @EventHandler
     public void onPlayerLeave(PlayerQuitEvent e) {
         Player player = e.getPlayer();
-        if (ScreenShare.frozenPlayers.contains(player.getUniqueId())){
+        if (ScreenShare.frozenPlayers.containsKey(player.getUniqueId())){
             ScreenShare.frozenPlayers.remove(player.getUniqueId());
             
             String command = plugin.getConfig().getString("escapescreenshare.bancommand");

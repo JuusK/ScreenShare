@@ -18,7 +18,7 @@ public class PlayerCommand implements Listener {
 
     @EventHandler
     public void onPlayerCommand(PlayerCommandPreprocessEvent e) {
-        if (ScreenShare.frozenPlayers.contains(e.getPlayer().getUniqueId())) { // If player frozen and command isn't in config cancel event and send message.
+        if (ScreenShare.frozenPlayers.containsKey(e.getPlayer().getUniqueId())) { // If player frozen and command isn't in config cancel event and send message.
             String command = e.getMessage().toLowerCase();
 
             for (String allowed : allowedCommands) {
