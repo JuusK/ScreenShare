@@ -1,11 +1,11 @@
-package plugin.screenShare.Listeners;
+package plugin.screenshare.listeners;
 
 import java.util.List;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
-import plugin.screenShare.ScreenShare;
+import plugin.screenshare.ScreenShare;
 import plugin.Message;
 
 public class PlayerCommand implements Listener {

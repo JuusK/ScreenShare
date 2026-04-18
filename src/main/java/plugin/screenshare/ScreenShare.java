@@ -1,13 +1,13 @@
-package plugin.screenShare;
+package plugin.screenshare;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
 import plugin.Message;
-import plugin.screenShare.Commands.Freeze;
-import plugin.screenShare.Commands.UnFreeze;
-import plugin.screenShare.Listeners.PlayerCommand;
-import plugin.screenShare.Listeners.PlayerLeave;
-import plugin.screenShare.Listeners.PlayerMove;
+import plugin.screenshare.commands.Freeze;
+import plugin.screenshare.commands.UnFreeze;
+import plugin.screenshare.listeners.PlayerCommand;
+import plugin.screenshare.listeners.PlayerLeave;
+import plugin.screenshare.listeners.PlayerMove;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;

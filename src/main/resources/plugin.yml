@@ -1,16 +1,16 @@
 name: ScreenShare
 version: '1.0'
-main: plugin.screenShare.ScreenShare
+main: plugin.screenshare.ScreenShare
 api-version: '1.21'
 commands:
   ssunfreeze:
     description: Unfreeze player
     aliases:
-      - kontçek
+      - unfreeze
     permission: screenshare.*
 
   ssfreeze:
     description: Freeze player
     aliases:
-      - kontbırak
+      - freeze
     permission: screenshare.*

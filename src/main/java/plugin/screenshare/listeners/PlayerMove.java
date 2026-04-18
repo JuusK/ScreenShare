@@ -1,9 +1,9 @@
-package plugin.screenShare.Listeners;
+package plugin.screenshare.listeners;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
-import plugin.screenShare.ScreenShare;
+import plugin.screenshare.ScreenShare;
 
 public class PlayerMove implements Listener {
     private final ScreenShare plugin;

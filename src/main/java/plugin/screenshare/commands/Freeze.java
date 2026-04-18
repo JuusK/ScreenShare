@@ -1,4 +1,4 @@
-package plugin.screenShare.Commands;
+package plugin.screenshare.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -7,7 +7,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import plugin.screenShare.ScreenShare;
+import plugin.screenshare.ScreenShare;
 import plugin.Message;
 
 public class Freeze implements CommandExecutor {

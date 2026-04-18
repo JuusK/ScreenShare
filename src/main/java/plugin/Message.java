@@ -6,7 +6,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
-import plugin.screenShare.ScreenShare;
+import plugin.screenshare.ScreenShare;
 
 public class Message {
     private static FileConfiguration messages;
