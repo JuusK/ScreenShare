@@ -36,11 +36,6 @@ public class UnFreeze implements CommandExecutor {
         }
 
 
-        if (!(sender instanceof Player)){
-            System.out.println("Only players can execute this command!");
-            return true;
-        }
-
         Player p = (Player) sender;
         if (args.length == 0){
             p.sendMessage(Message.get("messages.unfreeze.usage"));

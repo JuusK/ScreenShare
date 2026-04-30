@@ -36,10 +36,6 @@ public class Freeze implements CommandExecutor {
             }
         }
 
-        if (!(sender instanceof Player)){
-            System.out.println("ScreenShare - Only players can execute this command!");
-            return true;
-        }
 
         Player p = (Player) sender;
 
