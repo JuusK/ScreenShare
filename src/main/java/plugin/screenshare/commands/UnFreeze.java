@@ -36,7 +36,7 @@ public class UnFreeze implements CommandExecutor {
         }
 
 
-        Player p = (Player) sender;
+        CommandSender p = sender;
         if (args.length == 0){
             p.sendMessage(Message.get("messages.unfreeze.usage"));
             return true;
@@ -51,9 +51,11 @@ public class UnFreeze implements CommandExecutor {
         }
 
         // Send message if target is sender (can't unfreeze self)
-        if (target == p.getPlayer()){
-            p.sendMessage(Message.get("messages.unfreeze.cannot_unfreeze_self"));
-            return true;
+        if(p instanceof Player pl) {
+            if (target == pl.getPlayer()) {
+                p.sendMessage(Message.get("messages.unfreeze.cannot_unfreeze_self"));
+                return true;
+            }
         }
 
         if (ScreenShare.frozenPlayers.containsKey(target.getUniqueId())){

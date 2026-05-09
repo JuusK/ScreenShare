@@ -37,7 +37,8 @@ public class Freeze implements CommandExecutor {
         }
 
 
-        Player p = (Player) sender;
+        CommandSender p = sender;
+
 
         // Send message if args didn't provided
         if (args.length == 0){
@@ -55,9 +56,11 @@ public class Freeze implements CommandExecutor {
         }
 
         // Send message if target is sender (can't freeze self)
-        if (target == p.getPlayer()){
-            p.sendMessage(Message.get("messages.freeze.cannot_freeze_self"));
-            return true;
+        if(p instanceof  Player pl) {
+            if (target == pl.getPlayer()) {
+                p.sendMessage(Message.get("messages.freeze.cannot_freeze_self"));
+                return true;
+            }
         }
 
         if (!(ScreenShare.frozenPlayers.containsKey(target.getUniqueId()))){ // If target is not in frozen list
